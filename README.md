@@ -3,7 +3,7 @@
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz)
 [![Validate](https://github.com/kororos/ha-soniox/actions/workflows/validate.yml/badge.svg)](https://github.com/kororos/ha-soniox/actions/workflows/validate.yml)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/kororos/ha-soniox)](https://github.com/kororos/ha-soniox/releases)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/github/license/kororos/ha-soniox)](https://github.com/kororos/ha-soniox/blob/main/LICENSE)
 
 A custom Home Assistant integration that exposes [Soniox](https://soniox.com)
 as both a **speech-to-text** and **text-to-speech** provider, ready to plug
