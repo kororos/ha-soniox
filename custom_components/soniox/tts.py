@@ -24,6 +24,7 @@ from homeassistant.components.tts import (
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
+from homeassistant.helpers.device_registry import DeviceEntryType, DeviceInfo
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
 from . import SonioxConfigEntry
@@ -39,6 +40,7 @@ from .const import (
     DEFAULT_TTS_MODEL,
     DEFAULT_TTS_SAMPLE_RATE,
     DEFAULT_TTS_VOICE,
+    DOMAIN,
     SUPPORTED_LANGUAGES,
     TTS_REST_URL,
     TTS_VOICES,
@@ -73,6 +75,13 @@ class SonioxTTSEntity(TextToSpeechEntity):
     def __init__(self, entry: SonioxConfigEntry) -> None:
         self._entry = entry
         self._attr_unique_id = f"{entry.entry_id}-tts"
+        self._attr_device_info = DeviceInfo(
+            identifiers={(DOMAIN, entry.entry_id)},
+            name="Soniox",
+            manufacturer="Soniox",
+            model="Speech AI",
+            entry_type=DeviceEntryType.SERVICE,
+        )
 
     @property
     def default_language(self) -> str:

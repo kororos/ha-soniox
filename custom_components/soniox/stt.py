@@ -22,6 +22,7 @@ from homeassistant.components.stt import (
 )
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
+from homeassistant.helpers.device_registry import DeviceEntryType, DeviceInfo
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
 from . import SonioxConfigEntry
@@ -58,6 +59,13 @@ class SonioxSTTEntity(SpeechToTextEntity):
     def __init__(self, entry: SonioxConfigEntry) -> None:
         self._entry = entry
         self._attr_unique_id = f"{entry.entry_id}-stt"
+        self._attr_device_info = DeviceInfo(
+            identifiers={(DOMAIN, entry.entry_id)},
+            name="Soniox",
+            manufacturer="Soniox",
+            model="Speech AI",
+            entry_type=DeviceEntryType.SERVICE,
+        )
 
     @property
     def supported_languages(self) -> list[str]:
