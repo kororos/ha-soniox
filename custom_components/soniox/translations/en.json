@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Soniox",
+        "description": "Enter your Soniox API key. Create one at https://console.soniox.com.",
+        "data": {
+          "api_key": "API key"
+        }
+      },
+      "reconfigure": {
+        "title": "Update Soniox API key",
+        "data": {
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The API key was rejected by Soniox.",
+      "cannot_connect": "Could not reach the Soniox API."
+    },
+    "abort": {
+      "already_configured": "This Soniox account is already configured.",
+      "reconfigure_successful": "Soniox credentials updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Soniox defaults",
+        "description": "Defaults applied when a service call does not specify a value.",
+        "data": {
+          "stt_model": "STT model",
+          "tts_model": "TTS model",
+          "tts_voice": "Default TTS voice",
+          "tts_language": "Default TTS language",
+          "tts_audio_format": "TTS audio format",
+          "tts_sample_rate": "TTS sample rate (Hz, used for PCM/WAV)"
+        }
+      }
+    }
+  }
+}
