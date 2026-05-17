@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Soniox",
-        "description": "Enter your Soniox API key. Create one at https://console.soniox.com.",
+        "description": "Enter your Soniox API key. You can create one in the Soniox console.",
         "data": {
           "api_key": "API key"
         }

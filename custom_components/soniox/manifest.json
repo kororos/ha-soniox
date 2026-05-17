@@ -1,7 +1,6 @@
 {
   "domain": "soniox",
   "name": "Soniox",
-  "version": "0.1.0",
   "codeowners": ["@kororos"],
   "config_flow": true,
   "dependencies": [],
@@ -9,5 +8,6 @@
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/kororos/ha-soniox/issues",
-  "requirements": []
+  "requirements": [],
+  "version": "0.1.0"
 }
