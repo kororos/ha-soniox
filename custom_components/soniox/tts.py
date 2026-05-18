@@ -113,6 +113,7 @@ class SonioxTTSEntity(TextToSpeechEntity):
         self, message: str, language: str, options: dict[str, Any]
     ) -> TtsAudioType:
         """One-shot synthesis via the REST endpoint."""
+        _LOGGER.debug("Soniox TTS path: REST (async_get_tts_audio)")
         body = self._build_request_body(message, language, options)
         session = async_get_clientsession(self.hass)
         api_key: str = self._entry.data[CONF_API_KEY]
@@ -138,6 +139,7 @@ class SonioxTTSEntity(TextToSpeechEntity):
     async def async_stream_tts_audio(
         self, request: TTSAudioRequest
     ) -> TTSAudioResponse:
+        _LOGGER.debug("Soniox TTS path: WebSocket (async_stream_tts_audio)")
         """Streaming synthesis via the Soniox TTS WebSocket.
 
         Lets HA pipe text chunks (e.g. from an LLM) and get audio back with
