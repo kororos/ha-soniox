@@ -9,6 +9,10 @@ A custom Home Assistant integration that exposes [Soniox](https://soniox.com)
 as both a **speech-to-text** and **text-to-speech** provider, ready to plug
 into the Assist voice pipeline.
 
+> **Disclaimer**: This is an unofficial project and is not affiliated with,
+> endorsed by, or maintained by Soniox. The Soniox name and logo are used
+> with permission for the purpose of this community integration.
+
 - **STT** — real-time transcription via Soniox `stt-rt-v4` over WebSocket.
   Supports 60+ languages and sends low-latency final tokens as the user speaks.
 - **TTS** — `tts-rt-v1` voices, both as a one-shot REST call and as a

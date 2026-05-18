@@ -3,6 +3,9 @@
 Speech-to-text and text-to-speech for Home Assistant powered by
 [Soniox](https://soniox.com) — 60+ languages, low-latency streaming.
 
+> **Disclaimer**: This is an unofficial project and is not affiliated with,
+> endorsed by, or maintained by Soniox.
+
 ## Highlights
 
 - Real-time STT (`stt-rt-v4`) — WebSocket streaming with final tokens.
